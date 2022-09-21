@@ -13,6 +13,22 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        \App\Models\User::factory([
+          'name'     =>'pepito perez',
+          'email'    =>'correodeprueba@email.com',
+          'password' =>'correodeprueba@email.com8568'
+        ])->hasPosts(6)->create();
+
+        \App\Models\User::factory([
+            'name'     =>'juanito escarcha',
+            'email'    =>'supersayayin2@email.com',
+            'password' =>'supersayayin2@email.com5578'
+          ])->hasPosts(10)->create();
+
+          \App\Models\User::factory([
+            'name'     =>'kevin espisona',
+            'email'    =>'kevinmo45@email.com',
+            'password' =>'kevinmo45@email.com2567'
+          ])->hasPosts(3)->create();
     }
 }
