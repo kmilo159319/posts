@@ -10,7 +10,7 @@
         @if (session('message'))
         <div class="alert alert-success">{{ session('message') }}</div>
         @endif
-         <div class="col-md-5 m-2 mt-5">
+         <div class="col-md-5 row m-2 mt-5">
             <form action="{{route('posts.store',$post ?? '')}}" method="POST">
                 @csrf
                 @method('POST')

@@ -13,10 +13,10 @@
                 <div class="card-header">{{$post->titulo}}</div>
                   <div class="card-body row justify-content-end">
                     <div class="col-md-11">{{$post->contenido}}</div>
-                    <div class="col-2 mt-2">
+                    <div class="col-3 col-md-2 mt-2">
                        <a href="{{route('posts.edit',$post->id)}}" class="btn btn-primary">editar</a>
                     </div>
-                    <div class="col-3 mt-2">
+                    <div class="col-4 col-md-3 mt-2">
                         <form action="{{route('posts.destroy',$post->id)}}" method="POST">
                             @csrf
                             @method('DELETE')

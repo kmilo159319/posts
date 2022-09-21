@@ -18,18 +18,18 @@ class DatabaseSeeder extends Seeder
           'name'     =>'pepito perez',
           'email'    =>'correodeprueba@email.com',
           'password' => Hash::make('correodeprueba@email.com8568')
-        ])->hasPosts(6)->create();
+        ])->hasPosts(16)->create();
 
         \App\Models\User::factory([
             'name'     =>'juanito escarcha',
             'email'    =>'supersayayin2@email.com',
             'password' => Hash::make('supersayayin2@email.com5578')
-          ])->hasPosts(10)->create();
+          ])->hasPosts(30)->create();
 
           \App\Models\User::factory([
             'name'     =>'kevin espisona',
             'email'    =>'kevinmo45@email.com',
             'password' => Hash::make('kevinmo45@email.com2567')
-          ])->hasPosts(3)->create();
+          ])->hasPosts(53)->create();
     }
 }

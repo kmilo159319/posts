@@ -46,13 +46,12 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        $validator = Validator::make(
-            ['titulo' => 'required'],
-            ['contenido' => 'required']
-        );
+            $validator = Validator::make($request->all(),
+            ['titulo' => 'required',
+            'contenido' => 'required']);
 
         if($validator->fails()){
-            return back()
+         return back()
             ->with('status', 'error: no se pudo guardar la informacion {{datos incompletos o no hay conexion a la base de datos}}');
         }
 
